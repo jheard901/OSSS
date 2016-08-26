@@ -1,0 +1,27 @@
+8/26/16
+Created by: Javier Heard (jheard901)
+
+Operating System Snapshot
+aka: OSSS, OS3, OS cubed
+
+This software is open source and is designed to work with any OS for the
+purpose of taking a snapshot of the user interface, then restoring that
+snapshot at anytime the user wants it.
+
+The idea of it is to remember all opened files, folders, and applications
+that are shown on the gui (taskbar in windows), and be able to reopen these
+whenever the system restarts or if we just want to open up a different
+type of interface later. Configurable settings should include whether or not
+to save files, folders, or application; additionally, it could blacklist some
+filepaths in case users never want a particular file to never get saved in a
+snapshot, or even whitelist in case they want open specific files to get saved
+in a snapshot.
+
+It should read the path to the opened file, and copy that. For reopening it,
+it should check first to make sure the file isn't already opened. It should
+query the harddrive to make sure it is not asleep before attempting to open it
+- I think, don't really see this as a requirement though. It should acknowledge
+any applications that have dependencies on other applications such as a console
+window that is opened by a parent process/window like in Amazon's Lumberyard
+game engine at startup it has the asset browser dependent on the main process.
+
